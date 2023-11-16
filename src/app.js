@@ -10,14 +10,8 @@ window.onload = function() {
   console.log("Everything is working");
 
   document.querySelector(".numbers").innerHTML = generate_new_number();
-  let suit = generate_new_suit();
+
   console.log(suit);
-  for (let elem of document.querySelectorAll("#bot, #top")) {
-    elem.innerHTML = suit;
-    if (suit == "&diams;" || suit == "&hearts;") {
-      elem.style.color = "red";
-    }
-  }
   // if (suit == "&diams;" || suit == "&hearts;"){
   //     document.querySelector('.suit').style.color = "red";
   //   }
@@ -28,6 +22,14 @@ window.onload = function() {
 
 const suits = ["&spades;", "&hearts;", "&diams;", "&clubs;"];
 const values = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+let suit = generate_new_suit();
+suit ? window.onload.suit : generate_new_suit();
+for (let elem of document.querySelectorAll("#bot, #top")) {
+  elem.innerHTML = suit;
+  if (suit == "&diams;" || suit == "&hearts;") {
+    elem.style.color = "red";
+  }
+}
 
 function generate_new_suit() {
   let random_num = Math.floor(Math.random() * suits.length);

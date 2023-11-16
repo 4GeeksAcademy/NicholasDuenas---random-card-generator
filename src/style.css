@@ -19,11 +19,14 @@ body {
 
 #bot {
   font-size: 80px;
-  rotate: 180deg;
   margin-right: 20px;
 }
 
 .numbers {
   font-size: 6rem;
   font-family: "Times New Roman", Times, serif;
+}
+
+.card .bott {
+  rotate: 180deg;
 }
