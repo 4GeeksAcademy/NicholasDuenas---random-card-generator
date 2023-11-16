@@ -10,7 +10,10 @@ window.onload = function() {
   console.log("Everything is working");
 
   document.querySelector(".numbers").innerHTML = generate_new_number();
-  // document.querySelectorAll("#bot, #top").innerHTML = generate_new_suit();
+  let suit = generate_new_suit();
+  for(let elem of document.querySelectorAll("#bot, #top")){
+    elem.innerHTML = suit
+  }
   // console.log(document.querySelectorAll("#bot, #top"));
 };
 
